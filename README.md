@@ -1,4 +1,6 @@
 # Group Project
+Names:
+Thomas, William, Jonah and Ronan. 
 ## DeckBuilder-Style Game
 In this game the player will explore the map, aquire random abilities, and fight enemies.
 ![DeckBuilder](URL)
