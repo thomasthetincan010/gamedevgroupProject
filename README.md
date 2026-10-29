@@ -6,4 +6,4 @@ In this game the player will explore the map, aquire random abilities, and fight
 ## Style/theme
 This game will be a dungeon type game. 
 ## Who might consider playing this game:
-Those who rogue-like games.
+Those who like rogue-like games.
