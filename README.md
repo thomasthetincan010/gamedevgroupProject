@@ -10,4 +10,4 @@ This game will be a dungeon type game.
 ## Who might consider playing this game:
 Those who like rogue-like games.
 ## Player's goal: 
-Potentially, get to the boss, defeat it and win.
+Potentially, get to the boss, defeat it and win, while building a deck of different abilities to use.
