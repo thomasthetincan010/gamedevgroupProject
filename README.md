@@ -6,7 +6,7 @@ In this game the player will explore the map, acquire random abilities, and figh
 ![DeckBuilder](URL)
 [alt tag](URL)
 ## Style/theme
-This game will be a dungeon type game. 
+This game will be a dungeon crawler type game. 
 ## Who might consider playing this game:
 Those who like rogue-like games.
 ## Player's goal: 
