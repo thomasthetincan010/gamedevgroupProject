@@ -1,7 +1,7 @@
 # Group Project
 Names:
 Thomas, William, Jonah, and Ronan. 
-## Idea: DeckBuilder-Style Game
+## Idea: Blobby Built a Deck
 In this game the player will explore the map, acquire random abilities, and fight enemies.
 ## Style/theme
 This game will be a dungeon crawler type game. 
