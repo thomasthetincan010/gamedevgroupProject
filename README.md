@@ -1,6 +1,7 @@
 # Group Project
 Names:
 Thomas, William, Jonah, and Ronan. 
+![Pitch Document](https://docs.google.com/document/d/11qZ4OSl7S_QUOr5xzuW385jlq8WSC0yeNS633eo2SlQ/edit?tab=t.0)
 ## Idea: Blobby Built a Deck
 In this game the player will explore the map, acquire random abilities, and fight enemies.
 ## Style/theme
