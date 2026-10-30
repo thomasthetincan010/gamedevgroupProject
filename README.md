@@ -3,7 +3,6 @@ Names:
 Thomas, William, Jonah, and Ronan. 
 ## Idea: DeckBuilder-Style Game
 In this game the player will explore the map, acquire random abilities, and fight enemies.
-[alt tag](URL)
 ## Style/theme
 This game will be a dungeon crawler type game. 
 ## Who might consider playing this game:
