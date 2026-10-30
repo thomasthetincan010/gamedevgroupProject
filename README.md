@@ -20,3 +20,4 @@ Explore different rooms, collect upgrades to make the character more powerful, a
 ![Card concept](https://github.com/thomasthetincan010/gamedevgroupProject/blob/main/images/Card1.png)
 
 [Pitch Document](https://docs.google.com/document/d/11qZ4OSl7S_QUOr5xzuW385jlq8WSC0yeNS633eo2SlQ/edit?tab=t.0)
+![Class Diogram](https://github.com/thomasthetincan010/gamedevgroupProject/blob/main/images/GroupProjectClassDiogram.jpg?raw=true)
