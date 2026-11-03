@@ -21,7 +21,7 @@ Explore different rooms, collect upgrades to make the character more powerful, a
 ![Card concept](https://github.com/thomasthetincan010/gamedevgroupProject/blob/main/images/Card1.png)
 
 ### Pitch document:
-Title: Blobby Built a Deck, a DeckBuilder type game. 
+Title: Alchemist's Crypt, a DeckBuilder type game. 
 
 
 The genre of the game would be strategy and card type game. It’s also a dungeon crawler type game (or equivalent). People who like rogue-lite games will definitely play this. The platform would be made in processing.
