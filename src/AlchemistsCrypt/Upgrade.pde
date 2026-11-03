@@ -1,4 +1,4 @@
-// Ronan
+// Thomas
 class Upgrade {
 
   int x, y, w, h;
