@@ -6,7 +6,7 @@ In this game the player will explore the map, acquire random abilities, and figh
 ## Style/theme
 This game will be a top down deckbuilder
 ## Who might consider playing this game:
-Those who like rogue-lite games like Dead cells, The Binding of Isaac, and Vampire Survivors.
+Those who like rogue-like games like Dead cells, The Binding of Isaac, and Vampire Survivors.
 ## Main action or control:
 Includes walking, running, and firing projectiles. 
 ## Feedback/Challenge:
@@ -24,7 +24,7 @@ Explore different rooms, collect upgrades to make the character more powerful, a
 Title: Alchemist's Crypt, a DeckBuilder type game. 
 
 
-The genre of the game would be strategy and card type game. It’s also a dungeon crawler type game (or equivalent). People who like rogue-lite games will definitely play this. The platform would be made in processing.
+The genre of the game would be strategy and card type game. It’s also a dungeon crawler type game (or equivalent). People who like rogue-like games will definitely play this. The platform would be made in processing.
 The player’s goal would be to survive rooms, get to the boss, defeat it and win, while building a deck of different abilities to use.
 The loop is to simply fight enemies and collect decks of cards, and progress. One important rule or mechanic is card trashing.
 Players should be able to remove the card from the decks they clearly don’t want or need. The first playable version would include the players, some cards, including upgrades and the enemies.
