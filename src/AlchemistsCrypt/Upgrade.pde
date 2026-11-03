@@ -12,8 +12,17 @@ class Upgrade {
     w = 50;
     h = 250;
     u1 = loadImage("insertimagehere.png");
-    type = 't';
+
+float pValue = random(3);
+    if (pValue > 2.0) {
+      type = 'h'; 
+    } else if (pValue > 1.0) {
+      type = 't'; 
+    } else {
+      type = 's'; 
+    }
   }
+}
 
   void display() {
     fill (62, 75, 230);
