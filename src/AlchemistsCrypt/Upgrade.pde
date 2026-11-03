@@ -2,7 +2,7 @@
 class Upgrade {
 
 int x,y,w,h;
-p1 PImage;
+PImage; U1
 type: char;
 x = width/2
 y = height/2
