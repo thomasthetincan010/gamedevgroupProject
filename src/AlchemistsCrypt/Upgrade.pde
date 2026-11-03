@@ -13,13 +13,13 @@ class Upgrade {
     h = 250;
     u1 = loadImage("insertimagehere.png");
 
-float pValue = random(3);
+float uValue = random(3);
     if (pValue > 2.0) {
-      type = 'h'; 
-    } else if (pValue > 1.0) {
-      type = 't'; 
+      type = 'a'; // Upgrade A
+    } else if (uValue > 1.0) {
+      type = 'b'; // Upgrade B
     } else {
-      type = 's'; 
+      type = 'c'; // Upgrade C
     }
   }
 }
