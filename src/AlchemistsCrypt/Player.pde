@@ -10,7 +10,7 @@ PImage b1;
 
 //Constructor
 Player(){
-b1 = loadImage("https://github.com/thomasthetincan010/gamedevgroupProject/blob/main/images/Concept1.png")
+b1 = loadImage("https://github.com/thomasthetincan010/gamedevgroupProject/blob/main/images/Concept1.png");
 }
 
 //Member Methods
