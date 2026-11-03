@@ -15,6 +15,8 @@ x = 100;
 y = 100;
 h = 100;
 w = 100;
+health = 100;
+damage = 10;
 }
 //Member Methods
 void display(){
