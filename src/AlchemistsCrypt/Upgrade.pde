@@ -32,4 +32,3 @@ float uValue = random(3);
 //      image(r1, x, y, size, size);
     }
   }
-}
