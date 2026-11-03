@@ -19,4 +19,8 @@ void display() {
     fill (62, 75, 230);
     ellipse (x, y, w, h);
   }
+
+void move() {}
+void attack() {}
+void fire() {}
 }
