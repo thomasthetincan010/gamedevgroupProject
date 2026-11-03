@@ -23,20 +23,12 @@ float uValue = random(3);
     }
   }
 
-void display() {
-    imageMode(CENTER);
-    if (r1 != null) {
-      image(r1, x, y, size, size);
-    }
-    fill(200);
-    textSize(12);
-    textAlign(CENTER, CENTER);
-    text(type, x, y);
-  }
-}
-
   void display() {
+    imageMode(CENTER);
     fill (62, 75, 230);
     ellipse (x, y, w, h);
+//  if (r1 != null) {
+//      image(r1, x, y, size, size);
+    }
   }
 }
