@@ -2,14 +2,16 @@
 
 class Player {
 //Member Variable
-int x,y,w,h;
+int x,y,w,h,health,damage;
 PImage b1;
 
 
 
 
 //Constructor
-Player(){}
+Player(){
+b1 = ("https://github.com/thomasthetincan010/gamedevgroupProject/blob/main/images/Concept1.png")
+}
 
 //Member Methods
 void display(){
