@@ -26,4 +26,9 @@ fill(33,248,99);
 }
 void move(){}
 
+void fire(){}
+
+
+void attack(){}
+
 }
