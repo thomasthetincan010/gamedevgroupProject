@@ -11,6 +11,7 @@ class Upgrade {
     y = height/2;
     w = 50;
     h = 250;
+    u1 = loadImage("insertimagehere.png");
     type = 't';
   }
 
