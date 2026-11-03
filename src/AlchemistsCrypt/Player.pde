@@ -10,6 +10,7 @@ PImage b1;
 
 //Constructor
 Player(){
+//TODO: Verify and change placeholder values.
 //b1 = loadImage("Concept1.png");
 x = 100;
 y = 100;
@@ -20,10 +21,12 @@ damage = 10;
 }
 //Member Methods
 void display(){
+//TODO: make image functional.
 //image(b1,x,y,h,w);
 ellipse(x,y,h,w);
 fill(33,248,99);
 }
+//TODO: Make functions functional.
 void move(){}
 
 void fire(){}
