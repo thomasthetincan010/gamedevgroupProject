@@ -1,4 +1,4 @@
-// Ronan
+// Ronan Krejci
 
 class Enemy {
 //Member Variable
