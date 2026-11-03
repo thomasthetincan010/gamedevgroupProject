@@ -4,7 +4,7 @@ Upgrade u1;
 Player p1;
 
 void setup() {
-size(500,500);
+size(1920,950);
 }
 
 void draw() {}
