@@ -20,6 +20,7 @@ float uValue = random(3);
       type = 'b'; // Upgrade B
     } else {
       type = 'c'; // Upgrade C
+// TO DO: REPLACE PLACEHOLDERS!!!!!!
     }
   }
 
