@@ -2,7 +2,7 @@
 class Upgrade {
 
   int x, y, w, h;
-  PImage U1;
+  PImage u1;
   char type;
 
 
