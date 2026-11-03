@@ -11,7 +11,7 @@ class Upgrade {
     y = height/2;
     w = 50;
     h = 250;
-    u1 = loadImage("insertimagehere.png");
+    u1 = loadImage("insertimagehere.png"); // PLACEHOLDER NOT AN ACTUAL IMAGE
 
 float uValue = random(3);
     if (pValue > 2.0) {
