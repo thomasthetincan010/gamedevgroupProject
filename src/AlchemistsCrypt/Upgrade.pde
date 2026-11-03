@@ -22,6 +22,17 @@ float uValue = random(3);
       type = 'c'; // Upgrade C
     }
   }
+
+void display() {
+    imageMode(CENTER);
+    if (r1 != null) {
+      image(r1, x, y, size, size);
+    }
+    fill(200);
+    textSize(12);
+    textAlign(CENTER, CENTER);
+    text(type, x, y);
+  }
 }
 
   void display() {
