@@ -2,7 +2,8 @@
 
 class Player {
 //Member Variable
-int
+int x,y,w,h;
+PImage b1;
 
 
 
@@ -11,7 +12,9 @@ int
 Player(){}
 
 //Member Methods
-void display(){}
+void display(){
+
+}
 
 
 }
