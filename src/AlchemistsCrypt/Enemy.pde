@@ -14,7 +14,7 @@ Enemy(int x, int y) {
   health = 100;
   damage = 10;
   type = 't';
-  speed = 5;
+  speed = 2;
 }
 void display() {
     fill (62, 75, 230);
