@@ -1,46 +1,44 @@
-// Will Comstock
-
 class Player {
-//Member Variable
-int x,y,w,h,health,damage, speed;
-PImage b1;
+  //Member Variables
+  int x, y, score;
+  PImage player;
 
-
-
-
-//Constructor
-Player(){
-//TODO: Verify and change placeholder values.
-//b1 = loadImage("Concept1.png");
-x = 1000;
-y = 1000;
-h = 100;
-w = 100;
-health = 100;
-damage = 10;
-speed = 10;
-}
-//Member Methods
-void display(){
-//TODO: make image functional.
-//image(b1,x,y,h,w);
-ellipse(x,y,h,w);
-fill(33,248,99);
-}
-//TODO: Make functions functional.
-void move() {
-    // Simple keyboard movement for the player
-    if (keyPressed) {
-      if (keyCode == UP) y -= speed;
-      if (keyCode == DOWN) y += speed;
-      if (keyCode == LEFT) x -= speed;
-      if (keyCode == RIGHT) x += speed;
-    }
+  //Constructer
+  Player(int x, int y) {
+    this.x = x;
+    this.y = y;
+    score=0;
+    player = loadImage("person.png");
   }
 
-void fire(){}
+  // Member Methods
+  void display() {
+    imageMode(CENTER);
+    image(player, x, y);
+  }
 
-
-void attack(){}
-
+  void move(char dir) {
+    if (dir == 'w'  || dir == 'W') {
+      y = y - 10;
+    } else if (dir == 's' || dir == 'S') {
+      y = y + 10;
+    } else if (dir == 'a' || dir == 'A') {
+      x = x - 10;
+    } else if (dir == 'd' || dir == 'D') {
+      x = x + 10;
+    }
+    //EDGE TELEPORT
+  if (x> width+10) {
+    x = -10;
+  }
+  if (x< -10) {
+    x = width+10;
+  }
+  if (y > height+10) {
+    y = -10;
+  }
+  if (y < -10) {
+    y = height+10;
+  }
+  }
 }
