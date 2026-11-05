@@ -4,7 +4,7 @@ class Upgrade {
   char type;
   String name;
   String description;
-  // int goldCost; (MAYBE)
+  boolean isClicked = false; // Tracks if the upgrade has been taken
 
   Upgrade(int posX, int posY) {
     x = posX;
@@ -12,7 +12,6 @@ class Upgrade {
     w = 120;
     h = 160;
 
-    // u1 = loadImage("insertimagehere.png"); NOT AN ACTUAL IMAGE THIS IS A PLACEHOLDER
     float uValue = random(3);
     if (uValue > 2.0) {
       type = 'a';
@@ -28,12 +27,15 @@ class Upgrade {
       description = "This is Upgrade C";
     }
   }
-  // NOTE TO SELF REPLACE THE PLACEHOLDERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  // If code somehow breaks I can see why, some parts were directly copied from my SpaceGame
+// Notes: I do think that there should be an image ABOUT the card, any suggestions?
 
   void display() {
-    rectMode(CENTER);
+    if (isClicked) return;
 
+    // Sandboxes all fill, stroke, and rectModes so they don't leak into the player/enemy
+    pushStyle();
+
+    rectMode(CENTER);
     boolean isHovered = (mouseX > x - w/2 && mouseX < x + w/2 && mouseY > y - h/2 && mouseY < y + h/2);
 
     if (isHovered) {
@@ -52,8 +54,7 @@ class Upgrade {
     fill(255);
     textAlign(CENTER, CENTER);
     textSize(14);
-    text(name, x, y - h/4); // Title
-
+    text(name, x, y - h/4);
 
     if (u1 != null) {
       imageMode(CENTER);
@@ -66,7 +67,7 @@ class Upgrade {
     if (isHovered) {
       int boxW = 180;
       int boxH = 90;
-      int boxX = mouseX + 15; // maybe not 15
+      int boxX = mouseX + 15;
       int boxY = mouseY + 15;
 
       if (boxX + boxW > width) {
@@ -76,7 +77,8 @@ class Upgrade {
       fill(20, 20, 30, 240);
       stroke(150);
       strokeWeight(1);
-      rectMode(CORNER);
+
+      rectMode(CORNER); // Safely switch mode inside pushStyle sandbox
       rect(boxX, boxY, boxW, boxH, 5);
 
       fill(255, 215, 0);
@@ -87,8 +89,19 @@ class Upgrade {
       fill(220);
       textSize(11);
       text(description, boxX + 10, boxY + 28);
-
-      noStroke();
     }
+
+    popStyle(); // Restores original drawing style settings for the next item drawn in main tab
+  }
+
+  void checkClick() {
+    if (!isClicked && mouseX > x - w/2 && mouseX < x + w/2 && mouseY > y - h/2 && mouseY < y + h/2) {
+      isClicked = true;
+      applyUpgradeEffect();
+    }
+  }
+
+  void applyUpgradeEffect() {
+    println("Picked up " + name + " (Type: " + type + ")");
   }
 }
