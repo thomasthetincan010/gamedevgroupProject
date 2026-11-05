@@ -28,7 +28,7 @@ ellipse(x,y,h,w);
 fill(33,248,99);
 }
 //TODO: Make functions functional.
-void update() {
+void move() {
     // Simple keyboard movement for the player
     if (keyPressed) {
       if (keyCode == UP) y -= speed;
