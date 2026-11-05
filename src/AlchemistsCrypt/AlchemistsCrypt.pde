@@ -7,26 +7,24 @@ Enemy e1;
 void setup() {
   size(1920, 950);
   p1 = new Player();
-  e1 = new Enemy(50, 50 );
+  e1 = new Enemy(50, 50);
+  
+  u1 = new Upgrade(width / 2, height / 2);
 }
 
 void draw() {
   background(220);
-  p1.display();
-   p1.move();
-
   
-  // Update enemy to chase player, then display
+  p1.display();
+  p1.move();
+  
   e1.display();
   e1.move(p1);
   
-  
-
-  // Update enemy to chase player, then display
-  
+  u1.display();
 }
+
 void keyPressed() {
-  //WASD Movement
   if (key == 'w' || key == 'W') {
     p1.y = p1.y - p1.speed;
   } else if (key == 's' || key == 'S') {
