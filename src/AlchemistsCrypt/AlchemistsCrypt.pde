@@ -1,27 +1,39 @@
 // [Insert Name]
 
-Upgrade u1;
+Upgrade[] upgrades;
 Player p1;
 Enemy e1;
 
 void setup() {
   size(1920, 950);
   p1 = new Player();
-  e1 = new Enemy(50, 50 );
+  e1 = new Enemy(50, 50);
+  
+  // Set up 3 upgrade cards side-by-side in the center of the screen
+  upgrades = new Upgrade[3];
+  int cardSpacing = 160; 
+  int startX = width / 2 - cardSpacing;
+  
+  for (int i = 0; i < upgrades.length; i++) {
+    upgrades[i] = new Upgrade(startX + (i * cardSpacing), height / 2);
+  }
 }
 
 void draw() {
-   p1.move();
+  background(20); // Clear the frame so hover effects don't trail
+  
+  p1.move();
   p1.display();
   
-  // Update enemy to chase player, then display
   e1.move(p1);
   e1.display();
   
-
-  // Update enemy to chase player, then display
-  
+  // Display the upgrade shop cards
+  for (Upgrade u : upgrades) {
+    u.display();
+  }
 }
+
 void keyPressed() {
   //WASD Movement
   if (key == 'w' || key == 'W') {
