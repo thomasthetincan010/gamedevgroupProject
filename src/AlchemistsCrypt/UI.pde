@@ -1,10 +1,13 @@
 class UI{
   
   int x,y,w,h;
-  Boolean start, pause, end, stop;
+  boolean start, play, pause, end, stop;
   UI(){
-    
+  start = true;
+  play = false;
+  pause = false;
+  end = false;
   }
-  
+ 
   
 }
