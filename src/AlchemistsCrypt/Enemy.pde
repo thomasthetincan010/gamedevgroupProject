@@ -21,7 +21,7 @@ void display() {
     ellipse (x, y, w, h);
   }
 
- void chase(Player p) {
+ void move(Player p) {
     // Option A: Using basic coordinate comparison
     if (x < p.x) {x += speed;}
     if (x > p.x) {x -= speed;}
