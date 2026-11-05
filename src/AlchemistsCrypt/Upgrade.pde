@@ -4,7 +4,7 @@ class Upgrade {
   char type;
   String name;
   String description;
-  boolean isClicked = false; // Tracks if the upgrade has been taken
+  boolean isClicked = false;
 
   Upgrade(int posX, int posY) {
     x = posX;
@@ -27,12 +27,11 @@ class Upgrade {
       description = "This is Upgrade C";
     }
   }
-// Notes: I do think that there should be an image ABOUT the card, any suggestions?
+  // Notes: I do think that there should be an image ABOUT the card, any suggestions?
 
   void display() {
     if (isClicked) return;
 
-    // Sandboxes all fill, stroke, and rectModes so they don't leak into the player/enemy
     pushStyle();
 
     rectMode(CENTER);
@@ -78,7 +77,7 @@ class Upgrade {
       stroke(150);
       strokeWeight(1);
 
-      rectMode(CORNER); // Safely switch mode inside pushStyle sandbox
+      rectMode(CORNER);
       rect(boxX, boxY, boxW, boxH, 5);
 
       fill(255, 215, 0);
@@ -91,7 +90,7 @@ class Upgrade {
       text(description, boxX + 10, boxY + 28);
     }
 
-    popStyle(); // Restores original drawing style settings for the next item drawn in main tab
+    popStyle();
   }
 
   void checkClick() {
