@@ -2,7 +2,7 @@
 
 class Enemy {
 //Member Variable
-int x,y,w,h,health,damage;
+int x,y,w,h,health,damage,speed;
 PImage e1;
 char type;
 
