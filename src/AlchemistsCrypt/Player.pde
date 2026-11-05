@@ -24,8 +24,9 @@ speed = 25;
 void display(){
 //TODO: make image functional.
 //image(b1,x,y,h,w);
-ellipse(x,y,h,w);
 fill(33,248,99);
+ellipse(x,y,h,w);
+
 }
 //TODO: Make functions functional.
  void move() {
