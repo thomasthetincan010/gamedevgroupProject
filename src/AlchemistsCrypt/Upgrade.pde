@@ -4,7 +4,7 @@ class Upgrade {
   char type;
   String name;
   String description;
-  // int goldCost; (MAYBE, IT'S JUST AN IDEA!)
+  // int goldCost; (MAYBE)
 
   Upgrade(int posX, int posY) {
     x = posX;
@@ -16,21 +16,20 @@ class Upgrade {
     float uValue = random(3);
     if (uValue > 2.0) {
       type = 'a';
-      name = "INSERT NAME";
-      description = "INSERT DESCRIPTION";
+      name = "Upgrade A";
+      description = "This is Upgrade A";
     } else if (uValue > 1.0) {
       type = 'b';
-      name = "INSERT NAME";
-      description = "INSERT DESCRIPTION";
+      name = "Upgrade B";
+      description = "This is Upgrade B";
     } else {
       type = 'c';
-      name = "INSERT NAME";
-      description = "INSERT DESCRIPTION";
+      name = "Upgrade C";
+      description = "This is Upgrade C";
     }
   }
   // NOTE TO SELF REPLACE THE PLACEHOLDERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   // If code somehow breaks I can see why, some parts were directly copied from my SpaceGame
-// NOTE: NOTHING WILL ACTUALLY SHOW UNTIL THE MAIN TAB IS UPDATED
 
   void display() {
     rectMode(CENTER);
