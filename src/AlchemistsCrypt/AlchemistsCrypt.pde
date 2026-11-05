@@ -11,11 +11,11 @@ void setup() {
 }
 
 void draw() {
-   p1.update();
+   p1.move();
   p1.display();
   
   // Update enemy to chase player, then display
-  e1.chase(p1);
+  e1.move(p1);
   e1.display();
   
 
