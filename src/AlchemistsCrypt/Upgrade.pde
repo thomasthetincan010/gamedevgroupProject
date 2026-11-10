@@ -1,3 +1,4 @@
+// Thomas Li
 class Upgrade {
   int x, y, w, h;
   PImage u1;
