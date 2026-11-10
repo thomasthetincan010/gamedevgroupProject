@@ -20,6 +20,7 @@ void draw() {
   e1.display();
   e1.move(p1);
   u1.display();
+
 }
 
 void keyPressed() {
@@ -38,4 +39,6 @@ void keyPressed() {
 void mouseClicked() {
   // it checks if clicked or not
   u1.checkClick();
+  if( mouseButton == LEFT){}
+  if (mouseButton == RIGHT) {}
 }
