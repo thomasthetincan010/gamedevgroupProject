@@ -14,7 +14,7 @@ Enemy(int x, int y) {
   health = 100;
   damage = 10;
   type = 't';
-  speed = 2;
+  speed = 3;
   e1 = loadImage("Rustedorb2.png");
 }
 void display() {
