@@ -15,6 +15,8 @@ Enemy(int x, int y) {
   damage = 10;
   type = 't';
   speed = 2;
+//  e1 = loadImage("enemy.png.");
+
 }
 void display() {
     fill (62, 75, 230);
