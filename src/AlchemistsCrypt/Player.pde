@@ -12,8 +12,8 @@ PImage b1;
 Player(){
 //TODO: Verify and change placeholder values.
 b1 = loadImage("Concept1.png");
-x = 64;
-y = 64;
+x = 32;
+y = 32;
 h = 100;
 w = 100;
 health = 100;
@@ -23,7 +23,7 @@ speed = 25;
 //Member Methods
 void display(){
 //TODO: make image functional.
-image (b1,x,y);
+image(b1,x,y);
 imageMode(CENTER);
 //fill(33,248,99);
 //ellipse(x,y,h,w);
@@ -31,6 +31,8 @@ imageMode(CENTER);
 }
 //TODO: Make functions functional.
  void move() {
+   if (x< 45) {x = 45;}
+   if (x> 1885) {x = 1885;}
     
   }
 void fire(){}
