@@ -30,19 +30,7 @@ ellipse(x,y,h,w);
 }
 //TODO: Make functions functional.
  void move() {
-    //EDGE TELEPORT
-  if (x> width+10) {
-    x = -10;
-  }
-  if (x< -10) {
-    x = width+10;
-  }
-  if (y > height+10) {
-    y = -10;
-  }
-  if (y < -10) {
-    y = height+10;
-  }
+    
   }
 void fire(){}
 
