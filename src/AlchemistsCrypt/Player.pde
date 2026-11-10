@@ -33,7 +33,8 @@ imageMode(CENTER);
  void move() {
    if (x< 45) {x = 45;}
    if (x> 1885) {x = 1885;}
-    
+   if (y < 60) {y = 60;}
+    if (y > 800) {y = 800;}
   }
 void fire(){}
 
