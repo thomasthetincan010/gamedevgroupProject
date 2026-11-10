@@ -15,12 +15,12 @@ Enemy(int x, int y) {
   damage = 10;
   type = 't';
   speed = 2;
-//  e1 = loadImage("enemy.png.");
-
+  e1 = loadImage("Rustedorb2.png");
 }
 void display() {
-    fill (62, 75, 230);
-    ellipse (x, y, w, h);
+  image (e1,x,y);
+    //fill (62, 75, 230);
+    //ellipse (x, y, w, h);
   }
 
  void move(Player p) {
