@@ -11,9 +11,9 @@ PImage b1;
 //Constructor
 Player(){
 //TODO: Verify and change placeholder values.
-//b1 = loadImage("Concept1.png");
-x = 900;
-y = 900;
+b1 = loadImage("Concept1.png");
+x = 64;
+y = 64;
 h = 100;
 w = 100;
 health = 100;
@@ -23,9 +23,10 @@ speed = 25;
 //Member Methods
 void display(){
 //TODO: make image functional.
-//image(b1,x,y,h,w);
-fill(33,248,99);
-ellipse(x,y,h,w);
+image (b1,x,y);
+imageMode(CENTER);
+//fill(33,248,99);
+//ellipse(x,y,h,w);
 
 }
 //TODO: Make functions functional.
