@@ -30,6 +30,12 @@ void display() {
     if (y < p.y) {y += speed;}
     if (y > p.y) {y -= speed;}
  }
-void attack() {}
+void attack(Player p) {
+  // not tested because player dosent have health yet
+  float d = dist(x, y, p.x, p.y);
+  if (d < 100){
+    p.health = p.health - 10;
+  }
+}
 void fire() {}
 }
