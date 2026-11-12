@@ -29,7 +29,7 @@ class Upgrade {
     }
   }
   // Notes: I do think that there should be an image ABOUT the card, any suggestions?
-
+// MEMBER METHODS: 
   void display() {
     if (isClicked) return;
 
