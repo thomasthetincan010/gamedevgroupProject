@@ -24,7 +24,6 @@ void display() {
   }
 
  void move(Player p) {
-    // Option A: Using basic coordinate comparison
     if (x < p.x) {x += speed;}
     if (x > p.x) {x -= speed;}
     if (y < p.y) {y += speed;}
