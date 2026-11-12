@@ -3,7 +3,7 @@
 Upgrade u1;
 Player p1;
 Enemy e1;
-
+boolean start, play, pause, end, stop;
 void setup() {
   size(1920, 950);
   p1 = new Player();
