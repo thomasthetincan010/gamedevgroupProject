@@ -3,7 +3,7 @@
 class Player {
 //Member Variable
 int x,y,w,h,health,damage, speed;
-PImage b1;
+PImage b1,b2;
 
 
 
@@ -12,6 +12,7 @@ PImage b1;
 Player(){
 //TODO: Verify and change placeholder values.
 b1 = loadImage("Concept1.png");
+b2 = loadImage("Playerconcept2.png");
 x = 32;
 y = 32;
 h = 100;
