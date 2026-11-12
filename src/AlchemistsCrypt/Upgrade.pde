@@ -17,15 +17,15 @@ class Upgrade {
     if (uValue > 2.0) {
       type = 'a';
       name = "Upgrade A";
-      description = "This is Upgrade A. Gives Health";
+      description = "This is Upgrade A. Gives Health.";
     } else if (uValue > 1.0) {
       type = 'b';
       name = "Upgrade B";
-      description = "This is Upgrade B. I have no idea what it does.";
+      description = "This is Upgrade B. No idea what it does.";
     } else {
       type = 'c';
       name = "Upgrade C";
-      description = "This is Upgrade C. I also have no idea what this does.";
+      description = "This is Upgrade C. Also no idea what this does.";
     }
   }
   // Notes: I do think that there should be an image ABOUT the card, any suggestions?
