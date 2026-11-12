@@ -8,7 +8,11 @@ void setup() {
   size(1920, 950);
   p1 = new Player();
   e1 = new Enemy(50, 50);
-  
+  start = true;
+  play = false;
+  pause = false;
+  end = false;
+
   // Initialize the single upgrade card in the center of the screen
   u1 = new Upgrade(width / 2, height / 2);
 }
