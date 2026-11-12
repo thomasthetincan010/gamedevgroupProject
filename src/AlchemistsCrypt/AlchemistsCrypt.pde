@@ -1,7 +1,7 @@
 // [Jonah White]
-
+ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
 UI menu;
-Boolean start;
+Boolean start, spellfire;
 char screen = 'M';
 Button[] buttons = new Button[4];
 Button btnPlay, btnSettings, btnCredits, btnBack, btnPause, btnMainMenu;
@@ -38,9 +38,9 @@ void draw() {
     break;
   case 'P':
     levelDraw();
-        break;
+    break;
 
-    case 'L':
+  case 'L':
     //pausescreen();
     break;
   case 'D':
@@ -101,31 +101,36 @@ void mousePressed() {
     println("screen:" + screen);
   }
 }
-  void levelDraw() {
-    background(200);
-    p1.display();
-    p1.move();
-    e1.display();
-    e1.move(p1);
-    u1.display();
-  }
+void levelDraw() {
+  background(200);
+  p1.display();
+  p1.move();
+  e1.display();
+  e1.move(p1);
+  u1.display();
+}
 
-  void keyPressed() {
-    // WASD Movement
-    if (key == 'w' || key == 'W') {
-      p1.y = p1.y - p1.speed;
-    } else if (key == 's' || key == 'S') {
-      p1.y = p1.y + p1.speed;
-    } else if (key == 'a' || key == 'A') {
-      p1.x = p1.x - p1.speed;
-    } else if (key == 'd' || key == 'D') {
-      p1.x = p1.x + p1.speed;
-    }
-  }
+void keyPressed() {
+  // WASD Movement
+  if (key == 'w' || key == 'W') {
+    p1.y = p1.y - p1.speed;
+  } else if (key == 's' || key == 'S') {
+    p1.y = p1.y + p1.speed;
+  } else if (key == 'a' || key == 'A') {
+    p1.x = p1.x - p1.speed;
+  } else if (key == 'd' || key == 'D') {
+    p1.x = p1.x + p1.speed;
+  } //Player Projectile fire
+  else if (key=='x'|| key == 'X'&& start == true){
+   projectiles.add(new Projectile (p1.x,p1.y));
+}
+}
 
- void mouseClicked() {
+void mouseClicked() {
   // it checks if clicked or not
   u1.checkClick();
-  if( mouseButton == LEFT){}
-  if (mouseButton == RIGHT) {}
+  if ( mouseButton == LEFT) {
+  }
+  if (mouseButton == RIGHT) {
+  }
 }
