@@ -13,6 +13,7 @@ class Projectile{
   this.x = x;
   this.y = y;
   bulletspeed = 12;
+ enemybullet = loadImage("Enemybullet1.png");
   vx = cos(angle) * bulletspeed;
   vy = sin(angle) * bulletspeed;
   }
@@ -21,8 +22,9 @@ class Projectile{
   
   // Member methods
   void display(){
-    fill (62, 75, 230);
-    ellipse (x, y, 10,10);
+    //fill (62, 75, 230);
+    //ellipse (x, y, 10,10);
+    image(enemybullet,x,y);
   }
   
   
