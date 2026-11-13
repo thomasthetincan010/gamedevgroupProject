@@ -32,7 +32,14 @@ class Projectile{
     x += vx;
     y += vy;
   }
-  
+  boolean isOffScreen(){
+if(x<0||x>1920||y<0||y>950) {
+return true;
+} else {
+return false;
+}
+
+  }
   
   
   
