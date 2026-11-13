@@ -18,7 +18,7 @@ class Upgrade {
       type = 'a';
       name = "Upgrade A";
       description = "This is Upgrade A. Gives Health.";
-      //  icon = loadImage("Upgradea.png");
+        icon = loadImage("Upgradea.png");
     } else if (uValue > 1.0) {
       type = 'b';
       name = "Upgrade B";
