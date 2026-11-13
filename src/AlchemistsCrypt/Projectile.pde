@@ -1,4 +1,4 @@
-//WillComstock
+
 class Projectile {
 //To do, add enemy and player projectiles
   //Member Variables
