@@ -49,23 +49,6 @@ class Enemy {
         u.Health = u.Health - 1;
         p.Hit=true;
       }
-if (x < p.x) {
-
-      p.x += 200;
-        u.Health = u.Health - 1;
-    }
-        p.Hit=true;
-    if (x > p.x) {
-      }
-      p.x -= 200;
-    }
-    if (y < p.y) {
-      p.y += 200;
-    }
-    if (y > p.y) {
-      p.y -= 200;
-    }
-     }
     }
   }
   void fire() {
