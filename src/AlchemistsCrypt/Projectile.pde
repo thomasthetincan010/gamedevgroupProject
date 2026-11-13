@@ -1,47 +1,45 @@
 //Will Comstock
 
-class Projectile{
-  
+class Projectile {
+
   //Member Variables
   int bulletspeed;
   PImage enemybullet, pbullet;
-  float x,y,vx,vy;
-  
-  
+  float x, y, vx, vy;
+
+
   //Constructor
   Projectile(float x, float y, float angle) {
-  this.x = x;
-  this.y = y;
-  bulletspeed = 12;
- enemybullet = loadImage("Enemybullet1.png");
-  vx = cos(angle) * bulletspeed;
-  vy = sin(angle) * bulletspeed;
+    this.x = x;
+    this.y = y;
+    bulletspeed = 12;
+    vx = cos(angle) * bulletspeed;
+    vy = sin(angle) * bulletspeed;
   }
-  
-  
-  
+
+
+
   // Member methods
-  void display(){
-    //fill (62, 75, 230);
-    //ellipse (x, y, 10,10);
-    image(enemybullet,x,y);
+  void display() {
+    fill (62, 75, 230);
+    ellipse (x, y, 10, 10);
   }
-  
-  
-  void move(){
+
+
+  void move() {
     x += vx;
     y += vy;
   }
-  boolean isOffScreen(){
-if(x<0||x>1920||y<0||y>950) {
-return true;
-} else {
-return false;
-}
 
+
+
+
+  boolean isHit(Player p) {
+    float d = dist(x, y, p.x, p.y);
+    if (d<100) {
+      return true;
+    } else {
+      return false;
+    }
   }
-  
-  
-  
-  
 }
