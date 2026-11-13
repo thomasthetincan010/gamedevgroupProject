@@ -1,5 +1,6 @@
+//WillComstock
 class Projectile {
-
+//To do, add enemy and player projectiles
   //Member Variables
   int bulletspeed, x, y;
   PImage enemybullet, pbullet;
@@ -11,9 +12,11 @@ class Projectile {
     this.y = y;
     bulletspeed = 12;
     enemybullet = loadImage("Enemybullet1.png");
+    pbullet = loadImage("Playerbullet1.png");
   }
 
 
 
   // Member methods
+  void move(){}
 }
