@@ -1,13 +1,16 @@
 // [Jonah White]
-ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
+
 UI menu;
-Boolean start, spellfire;
+Boolean start;
 char screen = 'M';
 Button[] buttons = new Button[4];
 Button btnPlay, btnSettings, btnCredits, btnBack, btnPause, btnMainMenu;
 Upgrade u1;
 Player p1;
 Enemy e1;
+Timer eDist;
+ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
+
 
 void setup() {
 
@@ -23,6 +26,8 @@ void setup() {
 
   p1 = new Player();
   e1 = new Enemy(50, 50);
+  eDist = new Timer(5000);
+    eDist.start();
 
   // Initialize the single upgrade card in the center of the screen
   u1 = new Upgrade(width / 2, height / 2);
@@ -38,15 +43,16 @@ void draw() {
     break;
   case 'P':
     levelDraw();
-    break;
+        break;
 
-  case 'L':
+    case 'L':
     //pausescreen();
     break;
   case 'D':
     //deathscreen();
   }
 }
+
 
 void startscreen() {
   //Main menu
@@ -63,7 +69,11 @@ void startscreen() {
   btnSettings.hover();
   btnCredits.hover();
   btnPlay.hover();
-}
+  
+      
+      
+        
+    }
 
 void mousePressed() {
   switch(screen) {
@@ -101,36 +111,41 @@ void mousePressed() {
     println("screen:" + screen);
   }
 }
-void levelDraw() {
-  background(200);
-  p1.display();
-  p1.move();
-  e1.display();
-  e1.move(p1);
-  u1.display();
-}
+  void levelDraw() {
+    background(200);
+    p1.display();
+    p1.move();
+    e1.display();
+    e1.move(p1);
+    u1.display();
+    if(eDist.isFinished()){
+      float angle = atan2(p1.y - e1.y, p1.x - e1.x);
+      projectiles.add(new Projectile(e1.x,e1.y,angle));
+      eDist.start();
+    }
+    for (int i =0; i < projectiles.size(); i++) {
+      Projectile p = projectiles.get(i);
+      p.display();
+      p.move();
+    }
+  }
 
-void keyPressed() {
-  // WASD Movement
-  if (key == 'w' || key == 'W') {
-    p1.y = p1.y - p1.speed;
-  } else if (key == 's' || key == 'S') {
-    p1.y = p1.y + p1.speed;
-  } else if (key == 'a' || key == 'A') {
-    p1.x = p1.x - p1.speed;
-  } else if (key == 'd' || key == 'D') {
-    p1.x = p1.x + p1.speed;
-  } //Player Projectile fire
-  else if (key=='x'|| key == 'X'&& start == true){
-   projectiles.add(new Projectile (p1.x,p1.y));
-}
-}
+  void keyPressed() {
+    // WASD Movement
+    if (key == 'w' || key == 'W') {
+      p1.y = p1.y - p1.speed;
+    } else if (key == 's' || key == 'S') {
+      p1.y = p1.y + p1.speed;
+    } else if (key == 'a' || key == 'A') {
+      p1.x = p1.x - p1.speed;
+    } else if (key == 'd' || key == 'D') {
+      p1.x = p1.x + p1.speed;
+    }
+  }
 
-void mouseClicked() {
+ void mouseClicked() {
   // it checks if clicked or not
   u1.checkClick();
-  if ( mouseButton == LEFT) {
-  }
-  if (mouseButton == RIGHT) {
-  }
+  if( mouseButton == LEFT){}
+  if (mouseButton == RIGHT) {}
 }
