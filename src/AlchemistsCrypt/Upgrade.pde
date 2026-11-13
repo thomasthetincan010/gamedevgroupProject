@@ -1,7 +1,7 @@
 // Thomas Li
 class Upgrade {
   int x, y, w, h;
-  PImage u1;
+  PImage icon;
   char type;
   String name;
   String description;
@@ -18,17 +18,19 @@ class Upgrade {
       type = 'a';
       name = "Upgrade A";
       description = "This is Upgrade A. Gives Health.";
+      //  icon = loadImage("Upgradea.png");
     } else if (uValue > 1.0) {
       type = 'b';
       name = "Upgrade B";
       description = "This is Upgrade B. No idea what it does.";
+      //  icon = loadImage("Upgradeb.png");
     } else {
       type = 'c';
       name = "Upgrade C";
       description = "This is Upgrade C. Also no idea what this does.";
+      //  icon = loadImage("Upgradec.png");
     }
   }
-  // Notes: I do think that there should be an image ABOUT the card, any suggestions?
   // MEMBER METHODS:
   void display() {
     if (isClicked) return;
@@ -56,13 +58,15 @@ class Upgrade {
     textSize(14);
     text(name, x, y - h/4);
 
-    if (u1 != null) {
+    fill(255, 100);
+    ellipse(x, y, 55, 55);
+    if (icon != null) {
       imageMode(CENTER);
-      image(u1, x, y, 50, 50);
-    } else {
-      fill(255, 100);
-      ellipse(x, y, 40, 40);
+      image(icon, x, y, 40, 40);
     }
+
+
+
 
     if (isHovered) {
       int boxW = 180;
@@ -84,11 +88,11 @@ class Upgrade {
       fill(255, 215, 0);
       textAlign(LEFT, TOP);
       textSize(12);
-      text(name.toUpperCase(), boxX + 10, boxY + 10);
+      text(name.toUpperCase(), boxX + 8, boxY + 10);
 
       fill(220);
       textSize(11);
-      text(description, boxX + 10, boxY + 28);
+      text(description, boxX + 8, boxY + 25);
     }
 
     popStyle();
