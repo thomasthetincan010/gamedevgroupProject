@@ -1,4 +1,3 @@
-// Thomas Li
 class Upgrade {
   int x, y, w, h;
   PImage icon;
@@ -18,7 +17,7 @@ class Upgrade {
       type = 'a';
       name = "Upgrade A";
       description = "This is Upgrade A. Gives Health.";
-        icon = loadImage("Upgradea.png");
+      icon = loadImage("Upgradea.png");
     } else if (uValue > 1.0) {
       type = 'b';
       name = "Upgrade B";
@@ -107,5 +106,8 @@ class Upgrade {
 
   void applyUpgradeEffect() {
     println("Picked up " + name + " (Type: " + type + ")");
+    if (type == 'a') {
+      ui.Health += 1;
+    }
   }
 }
