@@ -1,22 +1,38 @@
+//Will Comstock
 
-class Projectile {
-//To do, add enemy and player projectiles
+class Projectile{
+  
   //Member Variables
-  int bulletspeed, x, y;
+  int bulletspeed;
   PImage enemybullet, pbullet;
-
-
+  float x,y,vx,vy;
+  
+  
   //Constructor
-  Projectile(int x, int y) {
-    this.x = x;
-    this.y = y;
-    bulletspeed = 12;
-    enemybullet = loadImage("Enemybullet1.png");
-    pbullet = loadImage("Playerbullet1.png");
+  Projectile(float x, float y, float angle) {
+  this.x = x;
+  this.y = y;
+  bulletspeed = 12;
+  vx = cos(angle) * bulletspeed;
+  vy = sin(angle) * bulletspeed;
   }
-
-
-
+  
+  
+  
   // Member methods
-  void move(){}
+  void display(){
+    fill (62, 75, 230);
+    ellipse (x, y, 10,10);
+  }
+  
+  
+  void move(){
+    x += vx;
+    y += vy;
+  }
+  
+  
+  
+  
+  
 }
