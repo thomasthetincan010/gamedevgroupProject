@@ -8,6 +8,7 @@ Button btnPlay, btnSettings, btnCredits, btnBack, btnPause, btnMainMenu;
 Upgrade u1;
 Player p1;
 Enemy e1;
+
 ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
 Timer eDist;
 
@@ -117,6 +118,7 @@ void levelDraw() {
   e1.display();
   ui.display();
   e1.move(p1);
+  e1.attack(ui, p1);
   u1.display();
   //Smooth Movement
   if ( W==true ) {
@@ -142,6 +144,11 @@ void levelDraw() {
     Projectile p = projectiles.get(i);
     p.display();
     p.move();
+    if(p.isHit(p1)){
+      projectiles.remove(p);
+      ui.Health -= 1;
+      
+    }
   }
   
 }
