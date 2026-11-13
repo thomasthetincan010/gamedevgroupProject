@@ -16,7 +16,7 @@ class Enemy {
     damage = 10;
     type = 't';
     speed = 3;
-    e1 = loadImage("Rustedorb2.png");
+    e1 = loadImage("Player.png");
   }
   void display() {
     image (e1, x, y);
@@ -38,16 +38,25 @@ class Enemy {
       y -= speed;
     }
   }
-  void attack(UI u, Player p) {
+
+  void attack(Player p, UI u) {
     // not tested because player dosent have health yet
     float d = dist(x, y, p.x, p.y);
-    if (d < 100) {
-      u.Health = u.Health - 1;
-      println(u.Health);
-      if (x < p.x) {
+    if (d < 60) {
+      println(p.Hit);
+      if ( p.Hit == false) {
+
+        u.Health = u.Health - 1;
+        p.Hit=true;
+      }
+if (x < p.x) {
+
       p.x += 200;
+        u.Health = u.Health - 1;
     }
+        p.Hit=true;
     if (x > p.x) {
+      }
       p.x -= 200;
     }
     if (y < p.y) {
@@ -56,6 +65,7 @@ class Enemy {
     if (y > p.y) {
       p.y -= 200;
     }
+     }
     }
   }
   void fire() {
