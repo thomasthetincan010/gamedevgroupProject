@@ -5,7 +5,7 @@ class Enemy {
   int x, y, w, h, health, damage, speed;
   PImage e1;
   char type;
-  
+
 
   Enemy(int x, int y) {
     this.x = x;
@@ -38,12 +38,26 @@ class Enemy {
       y -= speed;
     }
   }
-  void attack(Player p) {
+  void attack(UI u, Player p) {
     // not tested because player dosent have health yet
     float d = dist(x, y, p.x, p.y);
     if (d < 100) {
-      p.health = p.health - 10;
+      u.Health = u.Health - 1;
+      println(u.Health);
+      if (x < p.x) {
+      p.x += 200;
+    }
+    if (x > p.x) {
+      p.x -= 200;
+    }
+    if (y < p.y) {
+      p.y += 200;
+    }
+    if (y > p.y) {
+      p.y -= 200;
+    }
     }
   }
-  void fire() {}
+  void fire() {
+  }
 }
