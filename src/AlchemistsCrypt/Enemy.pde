@@ -16,7 +16,7 @@ class Enemy {
     damage = 10;
     type = 't';
     speed = 3;
-    e1 = loadImage("Player.png");
+    e1 = loadImage("Rustedorb2.png");
   }
   void display() {
     image (e1, x, y);
