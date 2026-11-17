@@ -185,3 +185,7 @@ void mouseClicked() {
   if (mouseButton == RIGHT) {
   }
 }
+//Program in game over screen
+void gameOver(){
+// for when health = zero
+}
