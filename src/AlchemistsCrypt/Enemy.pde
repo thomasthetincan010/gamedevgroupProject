@@ -38,19 +38,25 @@ class Enemy {
       y -= speed;
     }
   }
-
-  void attack(Player p, UI u) {
+  void attack(UI u, Player p) {
     // not tested because player dosent have health yet
     float d = dist(x, y, p.x, p.y);
-    if (d < 60) {
-      println(p.Hit);
-      if ( p.Hit == false) {
-
-        u.Health = u.Health - 1;
-        p.Hit=true;
+    if (d < 100) {
+      u.Health = u.Health - 1;
+      println(u.Health);
+      if (x < p.x) {
+        p.x += 200;
+      }
+      if (x > p.x) {
+        p.x -= 200;
+      }
+      if (y < p.y) {
+        p.y += 200;
+      }
+      if (y > p.y) {
+        p.y -= 200;
       }
     }
   }
-  void fire() {
-  }
+  void fire() {}
 }
