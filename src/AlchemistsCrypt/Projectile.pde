@@ -21,8 +21,9 @@ class Projectile {
 
   // Member methods
   void display() {
-    fill (62, 75, 230);
-    ellipse (x, y, 10, 10);
+    //fill (62, 75, 230);
+    //ellipse (x, y, 10, 10);
+    image(enemybullet,x,y);
   }
 
 
