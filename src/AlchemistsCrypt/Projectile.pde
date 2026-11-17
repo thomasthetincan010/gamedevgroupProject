@@ -15,6 +15,7 @@ class Projectile {
     bulletspeed = 12;
     vx = cos(angle) * bulletspeed;
     vy = sin(angle) * bulletspeed;
+  enemybullet = loadImage("Enemybullet1.png");
   }
 
 
