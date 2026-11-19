@@ -38,7 +38,7 @@ class Projectile {
 
   boolean isHit(Player p) {
     float d = dist(x, y, p.x, p.y);
-    if (d<100) {
+    if (d<50) {
       return true;
     } else {
       return false;
