@@ -1,6 +1,6 @@
 // [Jonah White]
 
-  UI ui;
+UI ui;
 Boolean start, W, A, S, D;
 char screen = 'M';
 Button[] buttons = new Button[4];
@@ -145,11 +145,11 @@ void levelDraw() {
     p.display();
     p.move();
 
-if(p.isHit(p1)){
+    if (p.isHit(p1)) {
       projectiles.remove(p);
-      u.Health = u.Health - 1;
+      ui.Health = ui.Health - 1;
       p1.Hit = true;
-
+    }
   }
 }
 
