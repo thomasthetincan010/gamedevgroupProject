@@ -1,6 +1,6 @@
 // [Jonah White]
 
-UI ui;
+  UI ui;
 Boolean start, W, A, S, D;
 char screen = 'M';
 Button[] buttons = new Button[4];
@@ -8,7 +8,6 @@ Button btnPlay, btnSettings, btnCredits, btnBack, btnPause, btnMainMenu;
 Upgrade u1;
 Player p1;
 Enemy e1;
-
 ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
 Timer eDist;
 
@@ -118,8 +117,9 @@ void levelDraw() {
   e1.display();
   ui.display();
   e1.move(p1);
-  e1.attack(ui, p1);
   u1.display();
+  e1.attack(p1, ui);
+
   //Smooth Movement
   if ( W==true ) {
     p1.y = p1.y - p1.speed;
@@ -133,8 +133,8 @@ void levelDraw() {
   if ( D==true ) {
     p1.x = p1.x + p1.speed;
   }
-  
-  
+
+
   if (eDist.isFinished()) {
     float angle = atan2(p1.y - e1.y, p1.x - e1.x);
     projectiles.add(new Projectile(e1.x, e1.y, angle));
@@ -144,13 +144,13 @@ void levelDraw() {
     Projectile p = projectiles.get(i);
     p.display();
     p.move();
-    if(p.isHit(p1)){
+
+if(p.isHit(p1)){
       projectiles.remove(p);
-      ui.Health -= 1;
-      
-    }
+      u.Health = u.Health - 1;
+      p1.Hit = true;
+
   }
-  
 }
 
 void keyPressed() {
@@ -184,8 +184,4 @@ void mouseClicked() {
   }
   if (mouseButton == RIGHT) {
   }
-}
-//Program in game over screen
-void gameOver(){
-// for when health = zero
 }
