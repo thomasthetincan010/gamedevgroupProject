@@ -2,10 +2,10 @@
 
 class Player {
   //Member Variable
-  int x, y, w, h, health, damage, speed;
+  int x, y, x1, y1, w, h, health, damage, speed;
   PImage b1, b2;
   boolean Hit;
-  Timer inv;
+  Timer inv, emy;
 
 
 
@@ -16,6 +16,8 @@ class Player {
     b2 = loadImage("Player.png");
     x = 32;
     y = 32;
+    x1 = x;
+    y1 = y;
     h = 100;
     w = 100;
     health = 100;
@@ -24,17 +26,23 @@ class Player {
     Hit = false;
     inv = new Timer(3000);
     inv.start();
-    
+    emy = new Timer(1000);
+    emy.start();
   }
   //Member Methods
   void display() {
     //TODO: make image functional.
     image(b1, x, y);
     imageMode(CENTER);
+    
+    if (emy.isFinished()) {
 
+      x1 = x;
+      y1 = y;
+      emy.start();
+    }
     if ( Hit == true && inv.isFinished()) {
       inv.start();
-
 
       Hit = false;
     }
