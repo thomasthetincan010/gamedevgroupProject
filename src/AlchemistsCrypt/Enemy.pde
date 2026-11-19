@@ -39,9 +39,8 @@ class Enemy {
     }
   }
   void attack(UI u, Player p) {
-    // not tested because player dosent have health yet
     float d = dist(x, y, p.x, p.y);
-    if (d < 100) {
+    if (d < 50) {
       u.Health = u.Health - 1;
       println(u.Health);
       if (x < p.x) {
